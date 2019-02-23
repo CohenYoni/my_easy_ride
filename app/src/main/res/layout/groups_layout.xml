@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_selected_date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"/>
+
+    <ListView
+        android:id="@+id/groups_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_selected_date"/>
+
+    <ImageButton
+        android:contentDescription="@string/add_new_ride_button_description"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/add_ride_btn"
+        android:background="@drawable/oval"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="25dp"
+        android:src="@mipmap/ic_plus_button"/>
+</RelativeLayout>

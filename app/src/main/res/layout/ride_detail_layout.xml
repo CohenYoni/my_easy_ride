@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:id="@+id/current_ride_detail"
+        android:layout_alignParentTop="true"/>
+
+    <Button
+        android:id="@+id/btn_send_to_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:layout_below="@id/current_ride_detail"
+        android:text="@string/send_to_all_btn" />
+
+    <ListView
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="10dp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/list_of_names"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btn_send_to_all"/>
+
+    <ImageButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:id="@+id/add_passenger_btn"
+        android:background="@drawable/oval"
+        android:elevation="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="40dp"
+        android:layout_marginEnd="25dp"
+        android:src="@mipmap/ic_plus_button"/>
+</RelativeLayout>

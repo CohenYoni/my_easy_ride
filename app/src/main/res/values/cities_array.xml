@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="cities_array">
+        <item>באר שבע</item>
+        <item>ראש העין</item>
+        <item>ירושלים</item>
+        <item>תל אביב</item>
+        <item>ראשון לציון</item>
+        <item>רעננה</item>
+        <item>כפר סבא</item>
+        <item>הרצליה</item>
+    </string-array>
+</resources>

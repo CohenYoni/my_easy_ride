@@ -1,3 +1,4 @@
+DROP TABLE reviews;
 DROP TABLE rides_passengers;
 DROP TABLE rides;
 DROP TABLE passengers;
@@ -24,6 +25,15 @@ CREATE TABLE rides_passengers (
 	ride_id INTEGER,
 	passenger_phone VARCHAR,
 	ride_rating REAL DEFAULT 0,
+	CONSTRAINT rides_passengers_pk PRIMARY KEY (ride_id, passenger_phone),
+	CONSTRAINT ride_id_fk FOREIGN KEY (ride_id) REFERENCES rides(ride_id),
+	CONSTRAINT passenger_phone_fk FOREIGN KEY (passenger_phone) REFERENCES passengers(phone)
+);
+
+CREATE TABLE reviews (
+	ride_id INTEGER,
+	passenger_phone VARCHAR,
+	review VARCHAR,
 	CONSTRAINT rides_passengers_pk PRIMARY KEY (ride_id, passenger_phone),
 	CONSTRAINT ride_id_fk FOREIGN KEY (ride_id) REFERENCES rides(ride_id),
 	CONSTRAINT passenger_phone_fk FOREIGN KEY (passenger_phone) REFERENCES passengers(phone)

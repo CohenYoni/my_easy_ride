@@ -24,10 +24,7 @@ public class RidesListAdapter extends ArrayAdapter<Ride> {
      */
     static class ViewHolder {
         TextView time;
-        TextView from_title;
-        TextView to_title;
-        TextView from_value;
-        TextView to_value;
+        TextView from_to_value;
     }
 
     /**
@@ -67,16 +64,14 @@ public class RidesListAdapter extends ArrayAdapter<Ride> {
         convertView = inflater.inflate(resource, parent, false);
         holder = new ViewHolder();
         holder.time = (TextView) convertView.findViewById(R.id.ride_time);
-        holder.from_title = (TextView) convertView.findViewById(R.id.ride_from);
-        holder.to_title = (TextView) convertView.findViewById(R.id.ride_to);
-        holder.from_value = (TextView) convertView.findViewById(R.id.ride_from_value);
-        holder.to_value = (TextView) convertView.findViewById(R.id.ride_to_value);
+        holder.from_to_value = (TextView) convertView.findViewById(R.id.ride_from_to_value);
 
         convertView.setTag(holder);
 
         holder.time.setText(ride.getRide_time());
-        holder.from_value.setText(ride.getFrom_city());
-        holder.to_value.setText(ride.getTo_city());
+        holder.from_to_value.setText(String.format(context.getResources().getString(R.string.from_to_msg),
+                ride.getFrom_city(),
+                ride.getTo_city()));
 
         return convertView;
     }

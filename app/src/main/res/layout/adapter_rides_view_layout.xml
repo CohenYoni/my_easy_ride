@@ -12,48 +12,13 @@
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:id="@+id/ride_time"
-        android:layout_weight="33.3"/>
+        android:layout_weight="70"/>
 
-    <LinearLayout
-        android:orientation="vertical"
+    <TextView
+        android:gravity="start"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="33.3">
-
-        <TextView
-            android:id="@+id/ride_from"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:gravity="center"
-            android:text="@string/ride_from" />
-
-        <TextView
-            android:gravity="center"
-            android:text="@string/ride_to"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/ride_to"/>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="33.3">
-
-        <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/ride_from_value"/>
-
-        <TextView
-            android:gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="30dp"
-            android:id="@+id/ride_to_value"/>
-
-    </LinearLayout>
+        android:layout_height="60dp"
+        android:id="@+id/ride_from_to_value"
+        android:layout_weight="30"/>
 
 </LinearLayout>
